@@ -42,7 +42,8 @@ animation:spin 1s linear infinite;
 #particles{
 position:fixed;
 inset:0;
-z-index:-1;
+z-index:0;
+pointer-events:none;
 }
 
 /* TOPBAR */
@@ -99,7 +100,7 @@ border-radius:8px;
 display:block;
 }
 
-/* HERO */
+
 .hero{
 height:100vh;
 display:flex;
@@ -108,16 +109,22 @@ align-items:center;
 text-align:center;
 position:relative;
 
-/* FIXED IMAGE */
+/*  FIXED IMAGE  */
 background:url("image.jpg") center/cover no-repeat;
+background-size:cover;
+background-position:center;
 }
+
 .hero-overlay{
 position:absolute;
 inset:0;
-background:rgba(0,0,0,0.6);
+
+/* ⚡ IMPORTANT: opacity reduce */
+background:rgba(0,0,0,0.35);
 }
 
 .hero-content{
+position:relative;
 z-index:2;
 }
 
