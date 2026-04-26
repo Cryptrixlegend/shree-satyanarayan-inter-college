@@ -1,0 +1,1 @@
+# shree-satyanarayan-inter-college
