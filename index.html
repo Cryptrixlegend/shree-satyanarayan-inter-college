@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SHREE SATYANARAYAN Inter College</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- GSAP (animations) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -19,7 +25,7 @@
 <!-- NAVBAR -->
 <header>
 <nav>
-<a href="index.html">Home</a>
+<a href="#home">Home</a>
 
 <div class="dropdown">
 <a href="#">About</a>
@@ -39,71 +45,66 @@
 </nav>
 </header>
 
-<!-- HERO SECTION -->
-<div class="hero">
-<h1>SHREE SATYANARAYAN INTER COLLEGE</h1>
-<p>Established 1978 • Building Future Leaders</p>
+<!-- HERO (CINEMATIC + SLIDER BACKGROUND) -->
+<div class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>SHREE SATYANARAYAN INTER COLLEGE</h1>
+    <p>Established 1978 • Building Future Leaders</p>
+
+    <button onclick="scrollToSection()">Explore Campus ↓</button>
+  </div>
+
+  <div class="scroll-indicator"></div>
 </div>
 
 <!-- QUICK HIGHLIGHTS -->
-<section>
+<section class="reveal">
 <h2>Welcome to Excellence in Education</h2>
-<p>
-We believe in discipline, knowledge, and character building for a brighter future.
-</p>
+<p>We believe in discipline, knowledge, and character building for a brighter future.</p>
 </section>
 
-<!-- PRINCIPAL MESSAGE (IMPORTANT SECTION) -->
-<section style="background:#e2e8f0;">
+<!-- PRINCIPAL MESSAGE (UPGRADED CARD) -->
+<section class="principal reveal">
+
 <h2>Principal’s Message</h2>
 
-<div style="display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:wrap;">
+<div class="principal-box">
 
-<img src="https://via.placeholder.com/250x250"
-style="border-radius:50%;box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+  <img src="https://via.placeholder.com/250x250" class="principal-img">
 
-<div style="max-width:600px;text-align:left;">
-<h3>Dear Parents, Greetings!</h3>
+  <div class="principal-text">
+    <h3>Dear Parents, Greetings!</h3>
 
-<p>
-It gives me immense pleasure to welcome you to <b>SHREE SATYANARAYAN Inter College</b>.
-Our institution is committed to providing quality education that nurtures not only academic excellence but also moral values and discipline.
-</p>
+    <p>
+    It gives me immense pleasure to welcome you to <b>SHREE SATYANARAYAN Inter College</b>.
+    Our institution is committed to providing quality education with discipline and values.
+    </p>
 
-<p>
-We aim to create responsible citizens who contribute positively to society. With dedicated teachers, modern facilities, and a strong vision, we strive for holistic development of every student.
-</p>
+    <p>
+    We aim to build responsible citizens who contribute positively to society.
+    </p>
 
-<p><b>— Principal</b></p>
-</div>
+    <p><b>— Principal</b></p>
+  </div>
 
 </div>
 </section>
 
 <!-- STREAMS -->
-<section>
+<section class="reveal">
 <h2>Academic Streams</h2>
 
 <div class="card-container">
-<div class="card">
-<h3>Science</h3>
-<p>Physics, Chemistry, Biology, Maths</p>
-</div>
-
-<div class="card">
-<h3>Commerce</h3>
-<p>Accounts, Business Studies, Economics</p>
-</div>
-
-<div class="card">
-<h3>Arts</h3>
-<p>History, Political Science, Sociology</p>
-</div>
+<div class="card">Science</div>
+<div class="card">Commerce</div>
+<div class="card">Arts</div>
 </div>
 </section>
 
 <!-- HIGHLIGHTS -->
-<section>
+<section class="reveal">
 <h2>Why Choose Us?</h2>
 
 <div class="card-container">
@@ -114,12 +115,12 @@ We aim to create responsible citizens who contribute positively to society. With
 </div>
 </section>
 
-<!-- IMAGE SLIDER -->
-<section>
+<!-- CAMPUS SLIDER -->
+<section class="reveal">
 <h2>Campus Life</h2>
 
 <div class="slider">
-<img id="slide" src="https://via.placeholder.com/800x400">
+<img id="slide">
 </div>
 </section>
 
