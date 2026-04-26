@@ -60,7 +60,7 @@ align-items:center;
 text-align:center;
 position:relative;
 
-background:url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1") center/cover;
+background:url("image.jpg") center/cover;
 }
 
 .hero-overlay{
